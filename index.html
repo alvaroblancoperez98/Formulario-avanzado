@@ -38,18 +38,44 @@
                 <!--Form del login-->
                 <form action="" class="formulario-login">
                     <h2>Iniciar sesión</h2>
-                    <input type="text" placeholder="Correo Electrónico">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="text" id="email" placeholder="Correo Electrónico">
+                    <input type="password" id="passw" placeholder="Contraseña">
                     <button>Entrar</button>
                 </form>
                 <!--Form del register-->
-                <form action="" class="formulario-register">
+                <form id="form-rg" action="" class="formulario-register">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Correo Electrónico">
-                    <input type="text" placeholder="Usuario">
-                    <input type="password" placeholder="Contraseña">
-                    <button>Registrarse</button>
+                    <div class="input-control">
+                        <input type="text" id="namerg" placeholder="Nombre">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <input type="text" id="emailrg" placeholder="Correo Electrónico">
+                        <div class="error"></div>
+                    </div>
+                    
+                    <div class="input-control">
+                        <input type="text" id="userrg" placeholder="Usuario">
+                        <div class="error"></div>
+                    </div>
+
+                    
+                    <div class="input-control">
+                        <input type="text" id="iban" placeholder="IBAN ej(ES2114650100722030876293)">
+                        <div class="error"></div>
+                    </div>
+                    
+                    <div class="input-control">
+                        <input type="text" id="swift" placeholder="swift">
+                        <div class="error"></div>
+                    </div>
+                    
+                    <div class="input-control">
+                        <input type="password" id="passwdrg" placeholder="Contraseña">
+                        <div class="error"></div>
+                    </div>
+                    <button type="submit">Registrarse</button>
                 </form>
             </div>
         </div>
