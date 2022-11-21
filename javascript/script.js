@@ -175,13 +175,7 @@ function LocalStorage(e){
         passwd: passwd
     };
 
-    var nombre = {
-        user : user
-    };
-
     var json = JSON.stringify(user);
-    var jsonuser = JSON.stringify(nombre);
-    localStorage.setItem("user", jsonuser);
     localStorage.setItem(email, json);
     console.log('usuario añadido');
 }
