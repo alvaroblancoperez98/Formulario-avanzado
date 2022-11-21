@@ -36,14 +36,16 @@
             </div>
             <div class="contenedor-login-register">
                 <!--Form del login-->
-                <form action="" class="formulario-login">
+                <form action="htmls/instalaciones.html" onsubmit="loginLocalStorage()" class="formulario-login">
                     <h2>Iniciar sesión</h2>
                     <input type="text" id="email" placeholder="Correo Electrónico">
-                    <input type="password" id="passw" placeholder="Contraseña">
-                    <button>Entrar</button>
+                    <input type="text" id="user" placeholder="Usuario">
+                    <input type="password" id="passwd" placeholder="Contraseña">
+                    <button id="btn-login">Entrar</button>
+                    <p id="result" class="result"></p>
                 </form>
                 <!--Form del register-->
-                <form id="form-rg" action="" class="formulario-register">
+                <form id="form-rg" onsubmit="LocalStorage()" action="" class="formulario-register">
                     <h2>Registrarse</h2>
                     <div class="input-control">
                         <input type="text" id="namerg" placeholder="Nombre">

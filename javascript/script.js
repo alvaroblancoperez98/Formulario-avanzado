@@ -31,7 +31,7 @@ function anchoPage() {
 
 anchoPage();
 
-
+//movimiento login y register
 function login() {
     if (window.innerWidth > 850) {
         formulario_login.style.display = "block";
@@ -88,6 +88,7 @@ form.addEventListener('submit', e => {
         iban.value = "";
         swift.value = "";
         passwd.value = "";
+        //alert("registro completado");
     }
 });
 
@@ -158,3 +159,52 @@ const validateInputs = () => {
         setSuccess(passwd);
     }
 }
+
+//LocalStorage register
+
+function LocalStorage(e){
+    event.preventDefault();
+
+    var email = document.getElementById('emailrg').value;
+    var passwd = document.getElementById('passwdrg').value;
+    var user = document.getElementById('userrg').value;
+
+    var user = {
+        email: email,
+        user: user,
+        passwd: passwd
+    };
+
+    var nombre = {
+        user : user
+    };
+
+    var json = JSON.stringify(user);
+    var jsonuser = JSON.stringify(nombre);
+    localStorage.setItem("user", jsonuser);
+    localStorage.setItem(email, json);
+    console.log('usuario añadido');
+}
+
+//LocalStorage Login
+function loginLocalStorage(e){
+    event.preventDefault();
+
+    var email = document.getElementById('email').value;
+    var passwd = document.getElementById('passwd').value;
+    var userlogin = document.getElementById('user').value;
+    var result = document.getElementById('result');
+
+    var user = localStorage.getItem(email);
+    var data = JSON.parse(user);
+
+    if(user == null){
+        result.innerHTML = 'Fallo crendenciales';
+    } else if(email == data.email && passwd == data.passwd && userlogin == data.user){
+        result.innerHTML = 'Logeado';
+        window.location.replace('htmls/instalaciones.html');
+    } else {
+        result.innerHTML = 'Fallo contraseña';
+    }
+}
+

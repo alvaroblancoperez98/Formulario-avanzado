@@ -205,6 +205,11 @@ transition: all 500ms;
 .input-control.error input{
     border-color: #ff3860;
 }
+
 .input-control.error{
     color: #ff3860;
+}
+
+.result{
+    color:black;
 }

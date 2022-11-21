@@ -20,5 +20,13 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <h1>bienvenido <span id="result"></span></h1>
+        <script>
+
+        document.getElementById('result').innerHTML=localStorage.getItem("userlogin");
+        </script>
+    </main>
 </body>
+
 </html>
