@@ -65,7 +65,7 @@ main{
     display: flex;
     justify-content: center;
     backdrop-filter: blur(10px);
-    background-color: blue;
+    background-color: #294674;
 }
 
 .contenedor-adaptable div{
@@ -125,7 +125,7 @@ transition: all 500ms;
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: #46A2FD;
+    color: #294674;
 }
 
 .contenedor-login-register form input{
@@ -143,7 +143,7 @@ transition: all 500ms;
     margin-top: 40px;
     border: none;
     font-size: 14px;
-    background: #46A2FD;
+    background: #294674;
     font-weight: 600;
     cursor: pointer;
     color: white;
@@ -212,4 +212,123 @@ transition: all 500ms;
 
 .result{
     color:black;
+}
+
+
+/* Pagina tarifas //informacion.html*/
+
+#price {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+}
+
+#titulo {
+    display: flex;
+}
+
+.precio {
+    position: relative;
+}
+
+.euros{
+    position: absolute;
+    left: 40px;
+}
+
+.numero{
+    font-size: 50px;
+    color: #8e8e8e;
+}
+
+.mes {
+    font-size: 13px;
+}
+
+.table {
+    background: #fff;
+    padding: 80px;
+}
+
+.caracteristicas {
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+#btnPlata, .btnOro, .btnDiamante {
+    background: #294674;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 22px;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.numero2{
+    font-size: 50px;
+    color: yellow;
+}
+
+.numero3{
+    font-size: 50px;
+    color: green;
+}
+
+#tablados {
+    position: relative;
+    box-shadow: 1px 1px 12px #ccc;
+}
+
+.cuadradosuperior {
+    width: 276px;
+    height: 60px;
+    background: #fff;
+    position: absolute;
+    top: -38px;
+    left: 0px;
+    box-shadow: -2px -4px 5px #ccc;
+}
+
+.cuadradoinferior {
+    width: 276px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    bottom: -38px;
+    left: 0px;
+    box-shadow: -1px 4px 5px #ccc;
+}
+
+/* Pagina instalaciones //instalaciones.html*/
+
+#main-inst {
+    margin: 50px auto;
+    width: 600px;
+}
+
+table{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 20px;
+}
+
+thead {
+    background-color: #294674;
+    border-bottom: solid 5px #0b1b36;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover {
+    background-color: #294674;
+    color:white;
 }

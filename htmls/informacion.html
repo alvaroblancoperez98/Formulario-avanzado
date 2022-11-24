@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">
+                <img class="logo" src="../images/logo blanco.jpg" alt="logo">
+            </a>
+            <ul class="enlaces-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+                <li><a href="informacion.html">Tarifas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="price">
+            <div class="table">
+                <h4 id="titulo">Plata</h4>
+                <div class="precio">
+                    <span class="euros">€</span>
+                    <span class="numero">99</span>
+                    <span class="mes">/mes</span>
+                </div>    
+                <div class="caracteristicas">
+                <p>Barato y practico</p>      
+                <p>Barato y practico</p>  
+                <p>Barato y practico</p> 
+                </div>   
+                <a id="btnPlata" onsubmit="localstorageTarifa(e)" href="instalaciones.html">Comprar</a>
+            </div>
+
+            <div class="table" id="tablados">
+                <div class="cuadradosuperior"></div>
+                <h4 id="titulo">Oro</h4>
+                <div class="precio">
+                    <span class="euros">€</span>
+                    <span class="numero2">150</span>
+                    <span class="mes">/mes</span>
+                </div>    
+                <div class="caracteristicas">
+                <p>Calidad precio</p>      
+                <p>Calidad precio</p>       
+                <p>Calidad precio</p>      
+                </div>   
+                <a class="btnOro" value="Oro" href="instalaciones.html">Comprar</a>
+                <div class="cuadradoinferior"></div>
+            </div>
+
+            <div class="table">
+                <h4 id="titulo">Diamante</h4>
+                <div class="precio">
+                    <span class="euros">€</span>
+                    <span class="numero3">200</span>
+                    <span class="mes">/mes</span>
+                </div>    
+                <div class="caracteristicas">
+                <p>Caro y bueno</p>      
+                <p>Caro y bueno</p>  
+                <p>Caro y bueno</p> 
+                </div>   
+                <a class="btnDiamante" value="Diamante" href="instalaciones.html">Comprar</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

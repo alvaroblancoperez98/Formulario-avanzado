@@ -92,6 +92,8 @@ form.addEventListener('submit', e => {
     }
 });
 
+
+/* funcion error form */
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -101,15 +103,17 @@ const setError = (element, message) => {
     inputControl.classList.remove('success');
 }
 
-const setSuccess = element => {
+/* funcion success form */
+const setSuccess = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
+    errorDisplay.innerText = message;
     inputControl.classList.remove('error');
+    inputControl.classList.add('success');
 }
 
+/* funcion validate form */
 const validateInputs = () => {
     const nameValue = name.value.trim();
     const emailValue = email.value.trim();
@@ -122,26 +126,27 @@ const validateInputs = () => {
     if(nameValue === ''){
         setError(name, 'Nombre vacio');
     } else{
-        setSuccess(name);
+        setSuccess(name, 'Nombre correcto');
+        localStorage.setItem("nombre" ,nameValue);
     }
     //validación email
     if(!emailValue.match(email_regex)){
         setError(email, 'Email incorrecto formato (aaaa@aaaa.aaa)');
     } else {
-        setSuccess(email);
+        setSuccess(email, 'email correcto');
     }
     //validación user
     if(userValue === ''){
         setError(user, 'Usuario vacio');
     } else{
-        setSuccess(user);
+        setSuccess(user, 'Usuario correcto');
     }
     //validación iban
     if (ibanValue.length === 28){
         if (!ibanValue.match(iban_regex)) {
             setError(iban, 'IBAN no valido siga el formato');
         } else {
-            setSuccess(iban);
+            setSuccess(iban, 'IBAN correcto');
         }
     } else {
         setError(iban, 'IBAN no valido siga el formato con los espacios');
@@ -150,14 +155,16 @@ const validateInputs = () => {
     if(!swiftValue.match(swift_regex)){
         setError(swift, 'ejemplo: BBVAESMM');
       } else {
-        setSuccess(swift);
+        setSuccess(swift, 'swift correcto');
       }
       //validación password
     if(passwdValue === '') {
         setError(passwd, 'Contraseña vacia');
     } else {
-        setSuccess(passwd);
+        setSuccess(passwd, 'Contraseña correcta');
     }
+
+    return true
 }
 
 //LocalStorage register
@@ -169,14 +176,18 @@ function LocalStorage(e){
     var passwd = document.getElementById('passwdrg').value;
     var user = document.getElementById('userrg').value;
 
-    var user = {
-        email: email,
-        user: user,
-        passwd: passwd
+/* no funciona
+    var objectJson = {
+        emailjson: email,
+        userjson: user,
+        passwdjson: passwd
     };
 
-    var json = JSON.stringify(user);
-    localStorage.setItem(email, json);
+    var json = JSON.stringify(objectJson);
+    */
+    localStorage.setItem("email" ,email);
+    localStorage.setItem("contraseña" ,passwd);
+    localStorage.setItem("usuario" ,user);
     console.log('usuario añadido');
 }
 
@@ -184,17 +195,18 @@ function LocalStorage(e){
 function loginLocalStorage(e){
     event.preventDefault();
 
-    var email = document.getElementById('email').value;
-    var passwd = document.getElementById('passwd').value;
+    var emaillogin = document.getElementById('email').value;
+    var passwdlogin = document.getElementById('passwd').value;
     var userlogin = document.getElementById('user').value;
     var result = document.getElementById('result');
 
-    var user = localStorage.getItem(email);
-    var data = JSON.parse(user);
+    var email = localStorage.getItem("email");
+    var passwd = localStorage.getItem("contraseña");
+    var user = localStorage.getItem("usuario");
 
-    if(user == null){
+    if(email == null && passwd == null && user == null){
         result.innerHTML = 'Fallo crendenciales';
-    } else if(email == data.email && passwd == data.passwd && userlogin == data.user){
+    } else if(emaillogin == email && passwdlogin == passwd && userlogin == user){
         result.innerHTML = 'Logeado';
         window.location.replace('htmls/instalaciones.html');
     } else {
@@ -202,3 +214,26 @@ function loginLocalStorage(e){
     }
 }
 
+/* func tarifa en localstorage */
+
+function localstorageTarifa(e) {
+    event.preventDefault();
+    const btnPlata = document.querySelector("btnPlata");
+    const btnOro = document.querySelector("btnOro");
+    const btnDiamante = document.querySelector("btnDiamante");
+
+    btnPlata.addEventListener("click", function(evento) {
+        localStorage.setItem("tarifa", "Plata");
+    } 
+    );
+
+    if(btnOro.addEventListener("click", function(evento) {
+        localStorage.setItem("tarifa", "Oro");
+    } 
+    ));
+
+    if(btnDiamante.addEventListener("click", function(evento) {
+        localStorage.setItem("tarifa", "Diamante");
+    } 
+    ));
+}
