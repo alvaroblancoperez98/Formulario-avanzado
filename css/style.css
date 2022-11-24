@@ -256,7 +256,7 @@ transition: all 500ms;
     color: #8e8e8e;
 }
 
-#btnPlata, .btnOro, .btnDiamante {
+.btnPlata, .btnOro, .btnDiamante {
     background: #294674;
     color: #fff;
     text-decoration: none;

@@ -213,27 +213,3 @@ function loginLocalStorage(e){
         result.innerHTML = 'Fallo contraseña';
     }
 }
-
-/* func tarifa en localstorage */
-
-function localstorageTarifa(e) {
-    event.preventDefault();
-    const btnPlata = document.querySelector("btnPlata");
-    const btnOro = document.querySelector("btnOro");
-    const btnDiamante = document.querySelector("btnDiamante");
-
-    btnPlata.addEventListener("click", function(evento) {
-        localStorage.setItem("tarifa", "Plata");
-    } 
-    );
-
-    if(btnOro.addEventListener("click", function(evento) {
-        localStorage.setItem("tarifa", "Oro");
-    } 
-    ));
-
-    if(btnDiamante.addEventListener("click", function(evento) {
-        localStorage.setItem("tarifa", "Diamante");
-    } 
-    ));
-}

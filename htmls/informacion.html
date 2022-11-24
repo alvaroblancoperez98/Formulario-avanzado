@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -28,13 +30,21 @@
                     <span class="euros">€</span>
                     <span class="numero">99</span>
                     <span class="mes">/mes</span>
-                </div>    
+                </div>
                 <div class="caracteristicas">
-                <p>Barato y practico</p>      
-                <p>Barato y practico</p>  
-                <p>Barato y practico</p> 
-                </div>   
-                <a id="btnPlata" onsubmit="localstorageTarifa(e)" href="instalaciones.html">Comprar</a>
+                    <p>Barato y practico</p>
+                    <p>Barato y practico</p>
+                    <p>Barato y practico</p>
+                </div>
+                <a class="btnPlata" onsubmit="localstorageTarifa(e)" href="instalaciones.html">Comprar</a>
+                <script>
+                    var btnPlata = document.querySelector(".btnPlata");
+                    btnPlata.addEventListener("click", function () {
+                        localStorage.removeItem("tarifa");
+                        localStorage.setItem("tarifa", "Plata");
+                    }
+                    );
+                </script>
             </div>
 
             <div class="table" id="tablados">
@@ -44,13 +54,21 @@
                     <span class="euros">€</span>
                     <span class="numero2">150</span>
                     <span class="mes">/mes</span>
-                </div>    
+                </div>
                 <div class="caracteristicas">
-                <p>Calidad precio</p>      
-                <p>Calidad precio</p>       
-                <p>Calidad precio</p>      
-                </div>   
+                    <p>Calidad precio</p>
+                    <p>Calidad precio</p>
+                    <p>Calidad precio</p>
+                </div>
                 <a class="btnOro" value="Oro" href="instalaciones.html">Comprar</a>
+                <script>
+                    var btnOro = document.querySelector(".btnOro");
+                    btnOro.addEventListener("click", function () {
+                        localStorage.removeItem("tarifa");
+                        localStorage.setItem("tarifa", "Oro");
+                    }
+                    );
+                </script>
                 <div class="cuadradoinferior"></div>
             </div>
 
@@ -60,15 +78,24 @@
                     <span class="euros">€</span>
                     <span class="numero3">200</span>
                     <span class="mes">/mes</span>
-                </div>    
+                </div>
                 <div class="caracteristicas">
-                <p>Caro y bueno</p>      
-                <p>Caro y bueno</p>  
-                <p>Caro y bueno</p> 
-                </div>   
+                    <p>Caro y bueno</p>
+                    <p>Caro y bueno</p>
+                    <p>Caro y bueno</p>
+                </div>
                 <a class="btnDiamante" value="Diamante" href="instalaciones.html">Comprar</a>
+                <script>
+                    var btnDiamante = document.querySelector(".btnDiamante");
+                    btnDiamante.addEventListener("click", function () {
+                        localStorage.removeItem("tarifa");
+                        localStorage.setItem("tarifa", "Diamante");
+                    }
+                    );
+                </script>
             </div>
         </section>
     </main>
 </body>
+
 </html>
