@@ -221,20 +221,27 @@ transition: all 500ms;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 #titulo {
     display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: -50px;
 }
 
 .precio {
     position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 .euros{
     position: absolute;
-    left: 40px;
+    right: 30px;
 }
 
 .numero{
@@ -244,6 +251,8 @@ transition: all 500ms;
 
 .mes {
     font-size: 13px;
+    position: absolute;
+    right: 0px;
 }
 
 .table {
@@ -253,7 +262,11 @@ transition: all 500ms;
 
 .caracteristicas {
     font-size: 14px;
-    color: #8e8e8e;
+    color:#294674;
+}
+
+.parrafocaract {
+    color:#294674;
 }
 
 .btnPlata, .btnOro, .btnDiamante {
@@ -262,7 +275,8 @@ transition: all 500ms;
     text-decoration: none;
     padding: 8px 22px;
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 10px;
 }
 
 .numero2{
@@ -281,7 +295,7 @@ transition: all 500ms;
 }
 
 .cuadradosuperior {
-    width: 276px;
+    width: 341px;
     height: 60px;
     background: #fff;
     position: absolute;
@@ -291,7 +305,7 @@ transition: all 500ms;
 }
 
 .cuadradoinferior {
-    width: 276px;
+    width: 341px;
     height: 40px;
     background: #fff;
     position: absolute;
