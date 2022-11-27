@@ -198,8 +198,9 @@ transition: all 500ms;
     flex-direction: column;
 }
 
-.input-control.success input{
-    border-color:#09c372;
+
+.input-control.success input{ 
+    border-color:#09c372;      /*esta linea no entiendo porque no va*/
 }
 
 .input-control.error input{
